@@ -1,6 +1,4 @@
 
-
-
 def word_count(my_string):
     previous_space = True
     words = 1
@@ -25,14 +23,9 @@ def word_length(my_string):
                 if previous_space == False:
                     previous_space = True
                     char += 0
-            elif i == ".":
-                char += 0
-            elif i == ",":
-                char += 0
-            elif i == "!":
-                char += 0
-            elif i == "?":
-                char += 0
+            elif i in ",.?/!@#$%^&*()-_=+{[}]": 
+              #So function doesn't count special characters
+              char += 0
             elif not (i == " "):
                 previous_space = False
                 char += 1
@@ -53,5 +46,4 @@ def average_word_length(my_string):
 
 
 
-print("hi")
-print(average_word_length("Hello Hi hey"))
+print(average_word_length("Hello, hey, testing only"))
